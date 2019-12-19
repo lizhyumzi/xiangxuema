@@ -9,6 +9,7 @@
 //todo:图片放大缩小需要按比例
 //todo  黏贴过来的文章，下载图片；
 //todo 新建知识右边来一个箭头，可以选编辑器
+//todo 去掉scroller on
 const fs = require("fs");
 const path = require("path");
 import img from "./mixins/img";
@@ -41,7 +42,7 @@ export default {
         } else {
           this.articleContent = window.editorMd.getValue();
         }
-        log.info(`saving:id:${this.$parent.article.id}; title:${this.$parent.article.title}; content:${this.articleContent.substr(0,20)}`);
+        // log.info(`saving:id:${this.$parent.article.id}; title:${this.$parent.article.title}; content:${this.articleContent.substr(0,20)}`);
         fs.writeFileSync(
           path.join(this.articlePath, "a.data"),
           this.articleContent,
@@ -54,7 +55,7 @@ export default {
           })
           .where("id", this.$parent.article.id);
         this.needSave = false;
-        log.info(`saved:id:${this.$parent.article.id};  title:${this.$parent.article.title}; content:${this.articleContent.substr(0,20)}`);
+        // log.info(`saved:id:${this.$parent.article.id};  title:${this.$parent.article.title}; content:${this.articleContent.substr(0,20)}`);
         resolve();
       });
     },
@@ -101,9 +102,9 @@ export default {
         path.join(this.articlePath, "a.data"),
         this.$root.rwOption
       );
-      log.info(
-        `entered:id:${this.$parent.article.id};  content:${this.articleContent.substr(0, 20)}`
-      );
+      // log.info(
+      //   `entered:id:${this.$parent.article.id};  content:${this.articleContent.substr(0, 20)}`
+      // );
       if (this.$parent.article.editor_type == "html") {
         this.$nextTick(() => {
           this.initEditorCk();

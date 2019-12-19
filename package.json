@@ -1,6 +1,6 @@
 {
     "name": "xiangxuema",
-    "version": "6.4.8",
+    "version": "6.4.11",
     "author": "liulun <412588801@qq.com>",
     "description": "xiangxuema",
     "license": "MIT",
@@ -20,12 +20,12 @@
     "build": {
         "npmRebuild": "false",
         "electronDownload": {
-            "version": "6.0.2",
+            "version": "6.0.3",
             "cache": "./cache",
             "mirror": "https://npm.taobao.org/mirrors/electron/",
             "arch": "x64"
         },
-        "electronVersion": "6.0.2",
+        "electronVersion": "6.0.3",
         "productName": "想学吗",
         "appId": "com.xiangxuema",
         "directories": {
@@ -78,7 +78,7 @@
         "electron-updater": "^4.1.2",
         "fs-extra": "^7.0.1",
         "knex": "^0.16.3",
-        "sqlite3": "^4.0.9",
+        "sqlite3": "^4.1.0",
         "sweetalert": "^2.1.2",
         "vue": "^2.5.16",
         "vue-electron": "^1.0.6",
@@ -100,7 +100,7 @@
         "css-loader": "^0.28.11",
         "del": "^3.0.0",
         "devtron": "^1.4.0",
-        "electron": "^6.0.2",
+        "electron": "^6.0.3",
         "electron-builder": "^21.2.0",
         "electron-debug": "^3.0.1",
         "electron-devtools-installer": "^2.2.4",
